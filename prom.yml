@@ -6,10 +6,9 @@ services:
     container_name: prometheus
     restart: always
     ports:
-      - "3040:9090"  # Prometheus web interface
+      - "3040:9090"
     volumes:
-      - prometheus_data:/prometheus  # Persistent storage
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro  # Config file
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
     networks:
       - custom_network
 
